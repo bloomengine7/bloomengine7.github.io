@@ -1,0 +1,263 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 STRICT //EN">
+<html>
+
+	<head>
+		<title>A Blink Game | bloomengine.com</title>
+	<script src="story.min.js"></script>
+	<script src="rot13.js"></script>
+	
+	<script src="jsprettify-all-latest.js"></script>	
+	<script src="jquery-1.6.1.min.js"></script>
+	<!--<script src="jquery.nicescroll.js"></script>-->
+
+	<script>
+	jQuery.fn.scrollTo = function(elem, speed) { 
+		$(this).animate({
+			scrollTop:  $(this).scrollTop() - $(this).offset().top + $(elem).offset().top 
+		}, speed == undefined ? 1000 : speed); 
+		return this; 
+	};
+	</script>
+
+	<link rel="stylesheet" href="preloader/css/style.css" />
+<link rel="stylesheet" href="preloader/css/jpreloader.css" />
+
+<script src="preloader/js/jpreLoader.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+/*
+$(document).ready(function() {
+
+    $("body").niceScroll({cursorminheight:"150", cursorwidth:"15px", cursorborderradius:"0", cursoropacitymin:".75", cursorborder:"none"});
+
+	$('#wrapper').hide();
+	$('header').css("top",-90);
+	$('footer').css("bottom",-25);
+	
+	$('#control').children('span:not(clicked)').click(function() {
+		$('.clicked').removeClass('clicked');
+		$(this).toggleClass('clicked');
+		var id = '#' + $(this).attr('id') + '-p';
+
+		$('.current').fadeOut(500, function() {
+			$(this).removeClass('current');
+			$(id).addClass('current');
+			$(id).fadeIn(500);
+		});
+	});
+});
+*/
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+
+	
+
+
+
+
+<script type="text/javascript">var ie = 0;</script>
+<!--[if IE]>
+<script type="text/javascript">ie = 1;</script>
+<![endif]-->
+
+
+
+	
+	
+
+
+
+	
+	
+	
+	<style>
+
+	
+
+
+	</style>
+	</head>
+	<body id="title">
+	
+<script>
+<!-- jPreLoader script -->
+$(document).ready(function() {
+	var timer;
+	
+	//calling jPreLoader function with properties
+	$('body').jpreLoader({
+		splashID: "#jSplash",
+		splashFunction: function() {  //passing Splash Screen script to jPreLoader
+			$('#jSplash').children('section').not('.selected').hide();
+			$('#jSplash').hide().fadeIn(800);
+			
+			timer = setInterval(function() {
+				splashRotator();
+			}, 3000);
+		}
+	}, function() {	//jPreLoader callback function
+		clearInterval(timer);
+		
+	});
+});
+<!-- End of jPreLoader script -->			
+</script>
+<script src="blink.js"></script>
+
+
+
+
+
+
+
+
+
+	<ul id=img-p class="holder current" style="display:none">
+		<li><img src="preloader/images/stripe.gif" /></li>
+		<li><img src="i/boy.gif" /></li>
+		<li><img src="i/atticus.gif" /></li>
+		<li><img src="i/atticus_peek.gif" /></li>
+		<li><img src="i/bed-of-leaves.gif" /></li>
+		<li><img src="i/bed-of-leaves-boy-sleep.gif" /></li>
+		<li><img src="i/boy.gif" /></li>
+		<li><img src="i/boy_head.gif" /></li>
+		<li><img src="i/ck_entrance.gif" /></li>
+		<li><img src="i/ck_entrance_fall.gif" /></li>
+		<li><img src="i/cloud_kingdom.gif" /></li>
+		<li><img src="i/dog.gif" /></li>
+		<li><img src="i/dog_bleed.gif" /></li>
+		<li><img src="i/dog_head.gif" /></li>
+		<li><img src="i/dog_head_angry.gif" /></li>
+		<li><img src="i/dog_rose.gif" /></li>
+		<li><img src="i/dog_rose_angry.gif" /></li>
+		<li><img src="i/dog_sleep.gif" /></li>
+		<li><img src="i/final_mole.gif" /></li>
+		<li><img src="i/flower_seller_head.gif" /></li>
+		<li><img src="i/flower_seller_head_moderate.gif" /></li>
+		<li><img src="i/flower_seller_head_talking.gif" /></li>
+		<li><img src="i/flower_stall.gif" /></li>
+		<li><img src="i/girl.gif" /></li>
+		<li><img src="i/girl_head.gif" /></li>
+		<li><img src="i/goat.gif" /></li>
+		<li><img src="i/goat_head.gif" /></li>
+		<li><img src="i/goat_head_angry.gif" /></li>
+		<li><img src="i/goat_man.gif" /></li>
+		<li><img src="i/market.gif" /></li>
+		<li><img src="i/market_fall.gif" /></li>
+		<li><img src="i/molepeep.gif" /></li>
+		<li><img src="i/mountain_base.gif" /></li>
+		<li><img src="i/mountain_base_fall.gif" /></li>
+		<li><img src="i/offer_rose.gif" /></li>
+		<li><img src="i/outside_city.gif" /></li>
+		<li><img src="i/outside_city_fall.gif" /></li>
+		<li><img src="i/rose_bleed.gif" /></li>
+		<li><img src="i/showbook.gif" /></li>
+		<li><img src="i/student.gif" /></li>
+		<li><img src="i/student_head.gif" /></li>
+		<li><img src="i/student_normal.gif" /></li>
+		<li><img src="i/town.gif" /></li>
+		<li><img src="i/tree_bg.gif" /></li>
+		<li><img src="i/tree_dead.gif" /></li>
+		<li><img src="i/tree_hide_rose.gif" /></li>
+		<li><img src="i/tree_mad.gif" /></li>
+		<li><img src="i/tree_mad_younger.gif" /></li>
+		<li><img src="i/tree_mad_youngest.gif" /></li>
+		<li><img src="i/tree_old.gif" /></li>
+		<li><img src="i/tree_talk.gif" /></li>
+		<li><img src="i/tree_talk_younger.gif" /></li>
+		<li><img src="i/tree_talk_youngest.gif" /></li>
+		<li><img src="i/tree_younger.gif" /></li>
+		<li><img src="i/tree_youngest.gif" /></li>
+		<li><img src="i/treesleep.gif" /></li>
+		<li><img src="i/ym_sad.gif" /></li>
+		
+		
+		<div class=clearfix></div>
+	</ul>
+	
+	
+
+
+
+
+<!-- This section is for Splash Screen -->
+<div id="jSplash">
+Loading...
+</div>
+<!-- End of Splash Screen -->
+
+
+
+<div id="wrap" class="prettify">
+	<div id="content"></div><!--content-->
+	<div id="anchor"></div>
+	<div id="rail" class="fixed"></div>
+	<div id="name"><h1><strong>A Blink Game</strong> by <a href='http://bloomengine.com' target='_blank'>BloomEngine</a></h1></div>
+	<div id="meta">
+	</div><!--meta-->
+	<div id="debug"></div><!--debug-->
+
+</div><!--wrap-->
+	<div id="txtHint">textHint</div>
+<div id="startScreen"><div id="startScreenInner"></div></div>
+
+
+<script type="text/javascript">
+   
+      $(document).ready(function() {
+		config();
+		process('start'); 
+        document.title = gameTitle;
+		
+		gameTitle="<h1><strong>" + gameTitle + "</strong> <span>by " + gameAuthor + "</span></h1>";
+		$("#name").html(gameTitle);
+	
+      });
+ 
+
+//
+//var formElem = document.getElementById('debugForm');
+//
+//
+//debugQuerystring='<a href="?';
+//for (i in fname) {
+//	debugQuerystring += document.getElementById('dc').value;
+//	debugQuerystring += "|";
+//}
+
+//debugQuerystring=debugQuerystring.substring(0, debugQuerystring.length-1);	
+//debugQuerystring += '">Do it</a>';
+//document.getElementById('queryLoad').innerHTML = debugQuerystring;
+
+
+
+
+
+
+
+</script>
+
+
+<script type='text/javascript'>
+
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22524818-1']);
+  _gaq.push(['_setDomainName', '.bloomengine.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+
+	</body>
+</html>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
+   <channel>
+      <description />
+      <title>test email bloomengine</title>
+      <generator>Bloomengine</generator>
+      <link>bloomengine.com</link>
+      <item>
+         <title>email to everyone test</title>
+         <description>&lt;p&gt;Email message here&lt;/p&gt;</description>
+         <link>http://bloomengine.com/binary</link>
+         <guid>http://blog.bloomengine.com/post/88576040956/the-wonder-years</guid>
+         <pubDate>Thu, 29 Mar 2018 06:28:41 -0400</pubDate>
+      </item>
+   </channel>
+</rss>

@@ -1,0 +1,150 @@
+
+The story
+"it all starts with a hello." line
+
+Environment:
+mall. Glass canopy. Don't know how high. It's always been there. Ever since her birth she's seen it.
+What's beyond? The stuff of legends. Air that is death. Slow death perhaps, but still death.
+
+Where is the date? Start at the date location.
+Coffee shop? No it's not a date. It has to be accidental meeting. Not solicited. 
+
+location: giant school. 
+Teachers: suits. Generations of teachers. They carry on the family line. Baby teachers. Teachers are born teachers. They do not have a life outside of school. The world is school.
+Enforcers: the school police. Low wage workers sick of rebellious kids. They are brainless thugs. Generations of thugs.
+Bullies. Robots. Genetically engineered.
+Popular kid.
+Students. Forever students. Some are adults, some are old.
+
+Physical environment:
+Match kids age groups. Kindergarten playpen district.
+
+Monkeybars. Huge network of bars. Geodesic dome
+
+Swings. Rows and rows of swings, with people using them.
+
+You are young girl, actually adult woman, but this isn't shown until later. You don't know how you got to this world. You are the player. "You're different" he says. You have no memory of who you are. Amnesia trope. You find out you belong to the class know as "new kid"
+
+The popular boy. Dressed like guy in grease.
+
+Popular girl. She's liked him since kindergarten. Why does she crave and want power?
+
+Most popular girl has to go out with most popular boy. she hates him actually. just about face. 
+
+he says looking for something new. Casanova
+
+events: lunchroom. eating. Boy comes. Girlfriend in background. He gets phonecall. You leave the lunchroom. They follow you. Washroom. Classroom. Trap you in bathroom. 
+
+Threaten, beat you up. Spray water on you. put gum in hair. pop girl always chewing
+
+Janitor and son saves you. Janitor gets angry that they used hose. The hose is sacred janitor equipment. Only janitor or certain rank can use it.
+ 
+> Locations
+	> lunchroom
+		> lunch. Can eat the stuff.
+		> PBJ sandwich. You are not sure what the PBJ stands for. Relic of the old world.
+
+	> Kitchen - network of steaming pots and sanitized metal. Sterile. You pushed out after a moment.
+
+	> Hallway
+		> intercom
+		> doors to classrooms
+			> students goofing off
+		> lockers
+			> line every available space
+		> Washroom
+		
+	> Washroom
+		> urinals
+		> Rebels smoking, which popular girl kicks out
+		> cameras
+		> hose, janitor equipment
+		> window, crack to outside world, hear birds chirping. sunlight streams golden
+		
+groups of kids
+Jocks
+Rebels
+Emo
+Nerd
+Goths
+Robots
+teacher's pets
+
+Security cameras - Watchers. Nobody knows who watches. They merely watch, never interfere. Occasionally some kids goof off in front of camera
+
+> misc
+	> lockers. Your locker.
+	> inventory > your student card, hung around your neck. Designated "new kid". Has info on your name. After you find out, you can use it to find and open your locker.
+	> note. welcome to school. From Administration. 
+		dear student 3482638592 the first day of school must very disorientating. but we are sure you will adjust over time.
+	backpack and books.
+		mirror
+		you get text 
+> inventory 
+	> cellphone
+		> one contact. 
+	> student card
+> events
+	boy flirts. leaves. says bye to you. bye Ethan your friend says. he ignores her.
+	friend next to you says holy wow. comments about I cant believe he talked to you. she keeps eating.
+	> Buzzer when lunch over, need to go to class. after look around at environment a bit. friend passes you, says see you in English. dont be late.
+	> you go to your locker. after explore it.
+	text message from friend, says important thing tell you. Meet me in bathroom. Holy wow. i have something important to tell you. Meet me in the bathroom right away.
+	> go to bathroom, realize its a trap. after you walk in girls trap you. one stands outside and puts cleaning do not enter sign on door.
+	> buzzer class started
+	tgey start doing stuff to you. one girl opens dooe shouts janitor coming.
+	they run
+	> janitor and his son comes in, complaining about water all over floor and unauthorized use of hose and sign
+	> another text message from her later. You probably hate me now. I'm sorry, they made me do it.
+	
+> ideas
+	> The 'architects', the creators of this world. Great mystery how school world came about.
+	
+	
+> Outside
+	> Playground. Kids playing.
+	> Guards
+	> blimps is sky with giant viewscreens
+		> lunch break is on
+		> music broadcasted
+		> screens
+			> cover, duck in event of nuclear attack from commies
+			> an apple a day keeps the doctor away
+			> Everything with a place and it it's place
+			> [google common wise words of practical wisdom]
+			
+> inventory
+	> you 
+		> hello my name is sticker
+	> school uniform too small.
+	> lunch tray (if in cafeteria)
+	> cellphone
+
+> location index
+	> start - cafeteria
+		> caf_cams
+			> kids goofing off
+		> caf_windows - to outside world.
+			> monkeybars
+			> swings
+			> blimps
+		> caf_students
+		> door_to_hallway_boy / door_to_hallway_tray
+	> hallway
+		> school billboards
+		> one side lined w lockers, other classooms
+		> claseooms
+			> kids filing in
+			> teacher pristine brown suits.
+			> pocket protector
+			> tie
+			> miniature desks, oversized students 
+		> camera
+		> washroom
+		
+	> kitchen
+		> factory line
+		> Supervisors barking orders from megaphone
+		> gurgling liquids, chop chop of cutting boards, clanging of pots and pans, roar of flame.
+		> Smell of lunch meats and onions. 
+		> chefs in hasmat suits.

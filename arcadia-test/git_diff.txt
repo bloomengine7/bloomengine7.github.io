@@ -1,0 +1,264 @@
+diff --git a/blink_functions.js b/blink_functions.js
+index e022966..9a68c80 100644
+--- a/blink_functions.js
++++ b/blink_functions.js
+@@ -1,3 +1,23 @@
++function clear_timeouts_intervals() {
++//https://github.com/nodejs/help/issues/174
++    for (var i = 1; i < 99999; i++)
++            window.clearInterval(i);
++
++    let id = window.setTimeout(() => {}, 0);
++    console.log(id);
++    while (id) {
++      window.clearTimeout(id);
++      id--;
++    }
++
++    id = window.setInterval(() => {}, 0);
++    console.log(id);
++    while (id) {
++      window.clearInterval(id);
++      id--;
++    }
++}
++
+ function check_if_duplicated(arr) {
+     var sorted_arr = arr.slice().sort(); // You can define the comparing function here. 
+                                      // JS by default uses a crappy string compare.
+diff --git a/story.css b/story.css
+index f321f0d..54d8f92 100644
+--- a/story.css
++++ b/story.css
+@@ -72,7 +72,7 @@ height:100px;
+     height:175px;
+     line-height:1em;
+     font-weight:normal !important;
+-
++    width: 1000px;
+ }
+ #startScreenInner h1 div, .glitch {
+     color: #575757;
+@@ -99,7 +99,7 @@ height:100px;
+ .glitch {
+   position: relative;
+   width: 1000px;
+-  height:1000px;
++  height:auto;
+   margin: 0 auto;
+ }
+ 
+@@ -175,7 +175,7 @@ height:100px;
+   content: attr(data-text);
+   position: absolute;
+   left: 2px;
+-  text-shadow: -1px 0 red;
++  text-shadow: -2px 0 magenta;
+   top: 0;
+   color: #575757;
+   background: white;
+@@ -268,7 +268,33 @@ height:100px;
+     font-size:.85em;
+ }
+ 
++.glitch_font_on:before {
++
++    //content: '4rcad7H2x3hts000x'; 
++}
++
+ .glitch_font_off:after,.glitch_font_off:before {
+     font-family: "wilder" !important;
+-    border:0;
++width:7em;
++
++
++}
++div {
++}
++#game_title_glitch {
++height:1.1em !important;
++width:5em;
++overflow:hidden;
++}
++#game_title_glitch:before {
++
++}
++
++
++html #overlay #oc {
++    font-family: "wilder" !important;
++    //font-family: "union regular" !important;
++    font-size:10em !important;
++    //letter-spacing:-.05em;
++    
+ }
+diff --git a/story.js b/story.js
+index 51fdd85..d7f790f 100644
+--- a/story.js
++++ b/story.js
+@@ -86,7 +86,7 @@ meta_labels = {
+ 
+ function config() {
+ 
+-	gameTitle = "<div class='glitch glitch_font_off' data-text='Arcadia Heights'>Arcadia Heights</div>";
++	gameTitle = "<div id='game_title_glitch' class='glitch glitch_font_off' data-text='Arcadia Heights'>Arcadia Heights</div>";
+ 	
+ 	gameAuthor = "Susan Newbourne | Bloomengine";
+ 	
+@@ -174,62 +174,101 @@ function timers() {
+ }
+ function daemon() {
+ //refers to global f array and global variable reward
++//runs of every process()
+ //
+-//
+-    console.log('he');
+-    
+    
+-    function bursts_glitch() {
+-         var items = [
+-            function(){
+-                
+-                     $(".glitch_off").toggleClass('glitch_off glitch'); 
+ 
+-            },
+-            2000,
+-            function(){
++    if (f.moves > 2 && f.node=="start") {
++        clear_timeouts_intervals();
++    } else if (!f.moves) {
+ 
+-                 $(".glitch").toggleClass('glitch glitch_off'); 
+-            },2000,
+-            function(){
++        function bursts_glitch() {
++             var items = [
++                function(){
++                    
++                         $(".glitch_off").toggleClass('glitch_off glitch'); 
++                        $("#game_title_glitch").attr('data-before','0000000');
++                },
++                1500,
++                function(){
++
++                     $(".glitch").toggleClass('glitch glitch_off'); 
++                },
++                1000,
++                   function(){
++                    
++                         $(".glitch_off").toggleClass('glitch_off glitch'); 
++                        $("#game_title_glitch").attr('data-before','0000000');
++                            
++                },
++                1500,
++                function(){
++
++                     $(".glitch").toggleClass('glitch glitch_off'); 
++                     $(".glitch_font_off").toggleClass('glitch_font_off glitch_font_on');
++                },
++                1000,
++                   function(){
++                    
++                         $(".glitch_off").toggleClass('glitch_off glitch'); 
++                        $("#game_title_glitch").attr('data-before','0000000');
++                         $(".glitch_font_on").toggleClass('glitch_font_on glitch_font_off'); 
++                        
++                },
++                1500,
++                function(){
++
++                     $(".glitch").toggleClass('glitch glitch_off'); 
++                },
++                1000
+                 
+-                $(".glitch_off").toggleClass('glitch_off glitch'); 
+-
+-            }
++            ];
++            timer(items); 
+             
+-        ];
+-        timer(items); 
+-        
+-        timeouts.push(setTimeout(bursts_glitch,10000));
+ 
+-    }
+-    bursts_glitch();
++        }
++        //bursts_glitch();
++        var x = setInterval(bursts_glitch,5000);
++        function font_swap_glitch() {
++            console.log('font_swap_glitch');
++             var items = [
++                300,
++                function(){
++                    
++                     $(".glitch_font_off").toggleClass('glitch_font_off glitch_font_on'); 
+ 
+-    function font_swap_glitch() {
+-         var items = [
+-            200,
+-            function(){
+-                
+-                 $(".glitch_font_off").toggleClass('glitch_font_off glitch_font_on'); 
++                },
++                100,
++                function(){
+ 
+-            },
+-            100,
+-            function(){
++                         $(".glitch_font_on").toggleClass('glitch_font_on glitch_font_off'); 
++                },
++                1000,
++                      300,
++                function(){
++                    
++                     $(".glitch_font_off").toggleClass('glitch_font_off glitch_font_on'); 
+ 
+-                     $(".glitch_font_on").toggleClass('glitch_font_on glitch_font_off'); 
+-            }
+-            
+-        ];
+-        timer(items); 
++                },
++                100,
++                function(){
+ 
++                         $(".glitch_font_on").toggleClass('glitch_font_on glitch_font_off'); 
++                },
++              
++                
++            ];
++            timer(items); 
+ 
+-        timeouts.push(setTimeout(font_swap_glitch,500));
+-    }
+-    font_swap_glitch();
+ 
++        }
++        //setInterval(font_swap_glitch,1000);
++        font_swap_glitch();
++    }
+ 
+     timers();
+ 
++
+     
+ 
+ 
+@@ -268,13 +307,7 @@ case "about":
+ break;
+ /////
+ case "start": //aka caf
+-
+-
+-for (var i = 0; i < timeouts.length; i++) {
+-    clearTimeout(timeouts[i]);
+-}
+-//quick reset of the timer array you just cleared
+-timeouts = [];
++ 
+ 
+ 
+     reset_inventory();

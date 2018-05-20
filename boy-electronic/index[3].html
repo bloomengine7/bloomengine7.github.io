@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" href="preloader/css/style.css" />
+<link rel="stylesheet" href="preloader/css/jpreloader.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script src="jquery.nicescroll.js"></script>
+
+<script src="preloader/js/jpreLoader.min.js"></script>
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+$(document).ready(function() {
+	$('#wrapper').hide();
+	$('header').css("top",-90);
+	$('footer').css("bottom",-25);
+	
+	$('#control').children('span:not(clicked)').click(function() {
+		$('.clicked').removeClass('clicked');
+		$(this).toggleClass('clicked');
+		var id = '#' + $(this).attr('id') + '-p';
+
+		$('.current').fadeOut(500, function() {
+			$(this).removeClass('current');
+			$(id).addClass('current');
+			$(id).fadeIn(500);
+		});
+	});
+});
+
+
+
+/*
+  $(document).ready(function() {
+  
+	var nice = $("html").niceScroll();  // The document page (body)
+	
+	$("#div1").html($("#div1").html()+' '+nice.version);
+    
+    $("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#00F",boxzoom:true}); // First scrollable DIV
+    
+    // Customizable cursor
+    // $("#boxscroll").niceScroll({touchbehavior:false,cursorcolor:"#00F",cursoropacitymax:0.7,cursorwidth:11,cursorborder:"1px solid #2848BE",cursorborderradius:"8px"}).cursor.css({"background-image":"url(img/mac6scroll.png)"}); // MAC like scrollbar
+
+    $("#boxscroll2").niceScroll("#contentscroll2",{cursorcolor:"#F00",cursoropacitymax:0.7,boxzoom:true,touchbehavior:true});  // Second scrollable DIV
+    $("#boxframe").niceScroll("#boxscroll3",{cursorcolor:"#0F0",cursoropacitymax:0.7,boxzoom:true});  // This is an IFrame (iPad compatible)
+	
+    $("#boxscroll4").niceScroll("#boxscroll4 .wrapper",{boxzoom:true});  // hw acceleration enabled when using wrapper
+    
+  });
+*/
+
+
+</script>
+</head>
+
+<body>
+
+
+<script>
+<!-- jPreLoader script -->
+$(document).ready(function() {
+	var timer;
+	
+	//calling jPreLoader function with properties
+	$('body').jpreLoader({
+		splashID: "#jSplash",
+		splashFunction: function() {  //passing Splash Screen script to jPreLoader
+			$('#jSplash').children('section').not('.selected').hide();
+			$('#jSplash').hide().fadeIn(800);
+			
+			timer = setInterval(function() {
+				splashRotator();
+			}, 3000);
+		}
+	}, function() {	//jPreLoader callback function
+		clearInterval(timer);
+		window.location = "game.html"
+	});
+});
+<!-- End of jPreLoader script -->
+
+function splashRotator(){
+	var cur = $('#jSplash').children('.selected');
+	var next = $(cur).next();
+	
+	if($(next).length != 0) {
+		$(next).addClass('selected');
+	} else {
+		$('#jSplash').children('section:first-child').addClass('selected');
+		next = $('#jSplash').children('section:first-child');
+	}
+		
+	$(cur).removeClass('selected').fadeOut(800, function() {
+		$(next).fadeIn(800);
+	});
+}
+</script>
+
+</body>
+</html>

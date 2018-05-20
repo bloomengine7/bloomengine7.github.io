@@ -1,0 +1,347 @@
+#owrap {
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter:alpha(opacity=100);
+    -moz-opacity:1;
+    -khtml-opacity: 1;
+    opacity: 1;
+    z-index: 2000;
+    text-align:center;
+    display:table;
+}
+#overlay {
+    display: table-cell;
+    text-align:center;
+    vertical-align: middle;
+    padding-bottom:10em;
+}
+#overlay #oc {
+    //display:none;
+    font-size:1vw;
+}
+#overlay .q {
+    font-size:5vw;
+}
+
+.a {
+    font-size:2vw;
+}
+
+.std {
+    background-color:black;
+}
+
+.fct {
+    background-color:white;
+
+}
+
+.i_out {
+}
+
+@font-face {
+    font-family: "wilder";
+    src: url("fonts/Wilder.otf");
+}
+
+
+@font-face {
+    font-family: "union regular";
+    src: url("fonts/Union-Regular.otf");
+}
+
+
+#startScreen {
+}
+
+#startScreenInner div {
+}
+#div {
+
+}
+#startScreenInner h1 {
+    padding:0;
+    margin:0;
+    display:block;
+    line-height:1em;
+    font-weight:normal !important;
+}
+#startScreenInner h1 div, .glitch {
+    color: #575757;
+
+}
+#startScreenInner h1 .glitch_off {
+    letter-spacing:-.01em;
+}
+#startScreenInner h1 .glitch,
+#startScreenInner h1 .glitch_off {
+//    font-family: "wilder" !important;
+    font-family: "Roboto Condensed" !important;
+    font-weight:400;
+    
+    font-size:10vw;
+    
+   letter-spacing: -.5vw;
+   line-height:1em;
+   margin:0;
+   padding:0 !important;
+}
+#startScreenInner h2 {
+    display:none;
+}
+
+
+
+
+.glitch {
+  position: relative;
+  height:auto;
+  margin: 0 auto;
+}
+
+/*
+ * https://css-tricks.com/glitch-effect-text-images-svg/
+ */
+@keyframes noise-anim {
+  0% {
+    clip: rect(18px, 9999px, 40px, 0);
+  }
+  5% {
+    clip: rect(75px, 9999px, 37px, 0);
+  }
+  10% {
+    clip: rect(12px, 9999px, 87px, 0);
+  }
+  15% {
+    clip: rect(37px, 9999px, 46px, 0);
+  }
+  20% {
+    clip: rect(68px, 9999px, 281px, 0);
+  }
+  25% {
+    clip: rect(56px, 9999px, 27px, 0);
+  }
+  30% {
+    clip: rect(32px, 9999px, 50px, 0);
+  }
+  35% {
+    clip: rect(18px, 9999px, 75px, 0);
+  }
+  40% {
+    clip: rect(20px, 9999px, 192px, 0);
+  }
+  45% {
+    clip: rect(24px, 9999px, 55px, 0);
+  }
+  50% {
+    clip: rect(94px, 9999px, 92px, 0);
+  }
+  55% {
+    clip: rect(91px, 9999px, 6px, 0);
+  }
+  60% {
+    clip: rect(74px, 9999px, 11px, 0);
+  }
+  65% {
+    clip: rect(8px, 9999px, 26px, 0);
+  }
+  70% {
+    clip: rect(47px, 9999px, 4px, 0);
+  }
+  75% {
+    clip: rect(31px, 9999px, 72px, 0);
+  }
+  80% {
+    clip: rect(49px, 9999px, 159px, 0);
+  }
+  85% {
+    clip: rect(7px, 9999px, 16px, 0);
+  }
+  90% {
+    clip: rect(80px, 9999px, 76px, 0);
+  }
+  95% {
+    clip: rect(95px, 9999px, 16px, 0);
+  }
+  100% {
+    clip: rect(71px, 9999px, 77px, 0);
+  }
+}
+.glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -2px 0 magenta;
+  top: 0;
+  color: #575757;
+  background: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s infinite linear alternate-reverse;
+}
+
+@keyframes noise-anim-2 {
+  0% {
+    clip: rect(30px, 9999px, 72px, 0);
+  }
+  5% {
+    clip: rect(70px, 9999px, 29px, 0);
+  }
+  10% {
+    clip: rect(15px, 9999px, 168px, 0);
+  }
+  15% {
+    clip: rect(62px, 9999px, 66px, 0);
+  }
+  20% {
+    clip: rect(29px, 9999px, 53px, 0);
+  }
+  25% {
+    clip: rect(43px, 9999px, 103px, 0);
+  }
+  30% {
+    clip: rect(54px, 9999px, 68px, 0);
+  }
+  35% {
+    clip: rect(65px, 9999px, 69px, 0);
+  }
+  40% {
+    clip: rect(73px, 9999px, 61px, 0);
+  }
+  45% {
+    clip: rect(86px, 9999px, 26px, 0);
+  }
+  50% {
+    clip: rect(52px, 9999px, 295px, 0);
+  }
+  55% {
+    clip: rect(77px, 9999px, 67px, 0);
+  }
+  60% {
+    clip: rect(51px, 9999px, 77px, 0);
+  }
+  65% {
+    clip: rect(27px, 9999px, 100px, 0);
+  }
+  70% {
+    clip: rect(4px, 9999px, 6px, 0);
+  }
+  75% {
+    clip: rect(88px, 9999px, 15px, 0);
+  }
+  80% {
+    clip: rect(22px, 9999px, 45px, 0);
+  }
+  85% {
+    clip: rect(22px, 9999px, 67px, 0);
+  }
+  90% {
+    clip: rect(33px, 9999px, 58px, 0);
+  }
+  95% {
+    clip: rect(64px, 9999px, 10px, 0);
+  }
+  100% {
+    clip: rect(24px, 9999px, 1px, 0);
+  }
+}
+.glitch:before {
+  content: attr(data-text);
+  position: absolute;
+  left: -2px;
+  text-shadow: 1px 0 magenta;
+  top: 0;
+  color:#575757;
+  background: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim-2 5s infinite linear alternate-reverse;
+}
+
+
+.glitch_font_on,.glitch_font_on:after,.glitch_font_on:before {
+    //font-family: "Roboto Condensed" !important;
+    //font-family:"union regular" !important;
+    font-weight:300;
+    font-size:.85em;
+}
+
+.glitch_font_on:before {
+
+    font-weight:300;
+    //content: '4rcad7H2x3hts000x'; 
+}
+
+.glitch_font_off:after,.glitch_font_off:before {
+//    font-family: "wilder" !important;
+    font-family: "Roboto Condensed" !important;
+    font-weight:300;
+    //font-weight:italics;
+    width:100%;
+}
+div {
+}
+#game_title_glitch {
+//height:2.1em !important;
+padding-bottom:1em;
+}
+#game_title_glitch:before {
+
+}
+
+html .glitch {
+//    font-family: "wilder";
+    font-family: "Roboto Condensed" !important;
+    font-weight:400;
+    
+}
+html #overlay #oc {
+    font-family: "Roboto Condensed" !important;
+    font-size:6vw;
+    letter-spacing:-.02vw;
+    //font-family: "union regular" !important;
+    //letter-spacing:-.05em;
+    
+}
+div {
+}
+#wrap, #startScreen  {
+font-family: "Roboto", sans-serif !important;
+}
+
+.glitch:before {
+    font-weight:bold;
+}
+
+.sub_glitch {
+
+}
+
+
+em {
+    font-style:italic !important;
+}
+
+
+html #wrap .metaText h2, #content h2 {
+    font-family: "Roboto Condensed" !important;
+    font-style: italic;
+    font-size:1em;
+
+}
+
+.metaText p {
+    font-size: .9em;
+    font-family: "Roboto Condensed" !important;
+}
+
+#startScreen p, p.back a, #metaContent a, #metaContent .deadLink {
+    font-style:italic;
+
+    font-family: "Roboto Condensed" !important;
+}
+

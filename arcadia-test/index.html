@@ -1,0 +1,251 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 STRICT //EN">
+<html>
+
+	<head>
+		<title>A Blink Game | bloomengine.com</title>
+		
+		
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        		
+        <script src="jsprettify-all-latest.js"></script>	
+        <script src="jquery-3.3.1.min.js"></script>
+  <script src="jquery.titlesequence.js"></script>
+		<script language="javascript" src="lz-string.min.js"></script>
+        <script src="blink_functions.js"></script>
+        <script src="story_functions.js"></script>
+        <script src="blink.js"></script>
+        <script src="rot13.js"></script>
+        <script>
+            //for handling file to file jumps
+            var load_story = getParameterByName("file");
+            if (load_story != null) {     
+
+                loadjscssfile(load_story, "js") //dynamically load and add this .js file
+            } else {
+                loadjscssfile("story.js","js")
+            }
+        </script>
+        <script src="marsaglia-polar.js"></script>
+        <script src="jsprettify-all-latest.js"></script>	
+        <script type="text/javascript" src="highlight.js"></script>
+	<script>
+	jQuery.fn.scrollTo = function(elem, speed) { 
+		$(this).animate({
+			scrollTop:  $(this).scrollTop() - $(this).offset().top + $(elem).offset().top 
+		}, speed == undefined ? 1000 : speed); 
+		return this; 
+	};
+	</script>
+	
+	<script src="external_load.js"></script>
+
+	<link rel="stylesheet" href="preloader/css/style.css" />
+	<link rel="stylesheet" href="preloader/css/jpreloader.css" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,300i,400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,400i,700,700i" rel="stylesheet">
+<script src="preloader/js/jpreLoader.min.js"></script>
+
+
+	
+<script>
+
+
+
+<!-- jPreLoader script -->
+$(document).ready(function() {
+
+
+		
+
+
+	config();
+    
+	process(); //initializes most stuff
+	document.title = gameTitle;
+	
+	gameTitle="<h1><strong>" + gameTitle + "</strong> <span>by " + gameAuthor + "</span></h1>";
+	$("#name").html(gameTitle);
+	
+	
+	
+	if (!debugMode) {
+	
+		//calling jPreLoader function with properties
+		var timer;
+		
+		$('body').jpreLoader({
+			splashID: "#jSplash",
+			splashFunction: function() {  //passing Splash Screen script to jPreLoader
+				$('#jSplash').children('section').not('.selected').hide();
+				$('#jSplash').hide().fadeIn(800);
+				resize();
+				timer = setInterval(function() {
+					splashRotator();
+				}, 3000);
+			}
+		}, function() {	//jPreLoader callback function
+			clearInterval(timer);
+			
+		});
+	
+	}
+	
+
+	
+	
+
+
+	
+	
+	
+});
+<!-- End of jPreLoader script -->	
+
+	
+</script>
+
+
+<!--[if lt IE 9]>
+<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+<script>
+/*
+$(document).ready(function() {
+
+    $("body").niceScroll({cursorminheight:"150", cursorwidth:"15px", cursorborderradius:"0", cursoropacitymin:".75", cursorborder:"none"});
+
+	$('#wrapper').hide();
+	$('header').css("top",-90);
+	$('footer').css("bottom",-25);
+	
+	$('#control').children('span:not(clicked)').click(function() {
+		$('.clicked').removeClass('clicked');
+		$(this).toggleClass('clicked');
+		var id = '#' + $(this).attr('id') + '-p';
+
+		$('.current').fadeOut(500, function() {
+			$(this).removeClass('current');
+			$(id).addClass('current');
+			$(id).fadeIn(500);
+		});
+	});
+});
+*/
+</script>
+
+
+	<link rel="stylesheet" type="text/css" href="style.css" />
+
+	<link rel="stylesheet" href="story.css" />
+
+	
+
+
+
+
+<script type="text/javascript">var ie = 0;</script>
+<!--[if IE]>
+<script type="text/javascript">ie = 1;</script>
+<![endif]-->
+
+
+
+	
+	
+
+
+
+	
+	
+	
+	<style>
+
+	
+
+
+	</style>
+	</head>
+	<body id="title">
+
+
+
+
+<!-- preloader images go here-->
+	<ul id=img-p class="holder current" style="display:none">
+		<li><img src="preloader/images/stripe.gif" /></li>
+		<li><img src="i/boy.gif" /></li>
+	
+		
+		
+		<div class=clearfix></div>
+	</ul>
+	
+
+
+
+
+	
+
+
+
+
+<!-- This section is for Splash Screen -->
+<div id="jSplash">
+</div>
+<!-- End of Splash Screen -->
+
+
+
+<div id="wrap" class="prettify">
+	<div id="wrap2">
+		<div id="content_wrap">
+			<div id="content"></div><!--content-->
+            <div id="owrap">
+                <div id="overlay">
+                    <div id="oc"></div>
+                </div>
+            </div>
+		</div><!--content_wrap-->
+		<div id="anchor"></div>
+		<div id="rail" class="fixed"></div>
+		<div id="name"><h1><strong>A Blink Game</strong> by <a href='http://bloomengine.com' target='_blank'>BloomEngine</a></h1></div>
+
+		<div id="meta">
+			<div class="metaBlock">
+				<div id='metaContent'></div>
+				<a id="metaButton">Menu <img src="arrow-up.gif"></a>
+			</div>
+		</div><!--meta-->
+	</div><!--wrap2-->
+</div><!--wrap-->
+	<div id="txtHint">Sorry, but you need Javascript and Klingon for this game to run.</div>
+<div id="startScreen"><div id="startScreenInner"></div></div>
+
+
+<script type="text/javascript">
+   
+ 
+
+//
+//var formElem = document.getElementById('debugForm');
+//
+//
+//debugQuerystring='<a href="?';
+//for (i in fname) {
+//	debugQuerystring += document.getElementById('dc').value;
+//	debugQuerystring += "|";
+//}
+
+//debugQuerystring=debugQuerystring.substring(0, debugQuerystring.length-1);	
+//debugQuerystring += '">Do it</a>';
+//document.getElementById('queryLoad').innerHTML = debugQuerystring;
+
+
+
+
+
+
+</script>
+
+	</body>
+</html>

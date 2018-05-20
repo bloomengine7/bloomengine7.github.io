@@ -1,0 +1,164 @@
+function talk(obj) {
+//dependencies: d, f[]
+    var text, variable, output_if_clicked;
+    var output="";
+    var choices="";
+    var visible = 0;
+
+    if (f.talk) {
+        d="";
+        output_if_clicked = obj[f.talk][1];
+        if (typeof output_if_clicked == 'function') {
+            output_if_clicked();
+        } else {
+           output+=output_if_clicked;
+        }
+        f[f.talk]="x"; //hide it
+        f.talk=0;
+    }
+
+    for (i in obj) {
+        variable = i;
+        text = obj[i][0]
+        output_if_clicked = obj[i][1];
+
+        if (exist(obj[i][2])) {
+            visible = 1; 
+        } 
+        
+        if (f[variable] == "x") {
+            visible = 0;
+        } 
+        
+        if (f[variable] == 1) {
+            visible = 1;
+        }
+
+        //check if this is the one that has been clicked on
+        if (visible) {//show link if hasn't been clicked on yet
+           choices+='<li><a onclick="f.talk=\''+  variable +'\'; process(\'' +  f.node + '\'); debug(); return false;">' + text + "</a></li>"; 
+        } 
+            
+        
+    }   
+
+    d += output + "<ul>" + choices + "</ul>";
+}
+function talk_item(text,variable,output_if_clicked) {
+    var output = "";
+    if (f.clear_d) {
+        d="";
+        f.clear_d=0;
+    }
+    //display handler
+
+    if (f[variable]) {
+
+       d=output_if_clicked+d;
+    }
+    else {//show link if hasn't been clicked on yet
+       d+='<a onclick="f.clear_d=1; f.'+  variable +'=1; process(\'' +  f.node + '\'); return false;">' + text + "</a>"; 
+    } 
+        
+     
+    
+
+    //return output;
+
+}
+
+function custom_back(node) {
+    if(back) {
+        return "<p class='back'>{Return|" + node + "}</p>";
+    } else {
+        return "";
+    }
+}
+
+//querystring handling 
+// query string: ?foo=lorem&bar=&baz
+/// query string: ?foo=lorem&bar=&baz
+/*
+var foo = getParameterByName('foo'); // "lorem"
+var bar = getParameterByName('bar'); // "" (present with empty value)
+var baz = getParameterByName('baz'); // "" (present with no value)
+var qux = getParameterByName('qux'); // null (absent)/
+*/
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, "\\$&");
+    var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, " "));
+}
+
+
+function reset_inventory() {
+    for (c in inventoryDescArray) {
+        console.log(c);
+		if (inventoryDescArray[c]["type"] == "object") {
+            i[c]=0;
+        }
+    }
+}
+
+function bk(node) {
+    var output = "<p class='back'>{Return|" + node + "}</p>";
+
+    console.log('here');
+    root=1;
+    return output;
+}
+
+function populate_with_zeros(array,array_key_name) {
+    for (var i in array_key_name) {
+        array[array_key_name[i]]=0;
+    }
+    return array; 
+}
+
+function copy_querystring_to_world_state(query,number_of_flag_group) {
+    var query = "changed " + query;
+
+
+    var query_split = query.split(":");
+    var output = query_split[number_of_flag_group].substring(0, query_split[number_of_flag_group].length-1);
+    //console.log(output);
+   //return syncVariables(query_split[number_of_flag_group];
+}
+
+
+function forEach(array, action) {
+    for (var i = 0; i < array.length; i++) {
+        action(array[i]);
+    }
+}
+
+function isNumber (value) {
+return typeof value === 'number' && isFinite(value);
+};
+function timer(fn_array) {
+    if (isNumber(fn_array[0])) {
+        //console.log('number');
+        setTimeout(function() {
+        timer(fn_array);},fn_array[0]);
+        fn_array.shift();
+    } else if (fn_array.length >= 1) {
+        //console.log('function');
+        fn_array[0]();
+        jsprettify.prettify();
+        fn_array.shift();
+        timer(fn_array);
+    }
+}
+
+
+
+function initNode(node) {
+
+    f[node]=node;
+    nodes(node);
+    //process(node,0,0,{"manual":1});
+}

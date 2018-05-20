@@ -1,0 +1,296 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 TRANSITIONAL//EN">
+<html>
+
+	<head>
+		<title></title>
+		<style>
+		
+		
+/* ----------------------------------
+ Reset css
+------------------------------------*/
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {margin:0;padding:0;}
+
+fieldset,img {border:0;}
+address,caption,cite,code,dfn,em,strong,th,var {font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6 {font-size:100%;font-weight:normal;}
+q:before,q:after {content:'';}
+abbr,acronym {border:0;}
+
+
+/* ----------------------------------
+Default font-styling for content area and editor
+---------------------------------- */
+table {border-collapse:collapse;border-spacing:0;}
+
+body {
+	//background-image:url("images/baseline.gif");
+   	font-size:18px;
+	font-family:georgia;
+	line-height:30px;
+}
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td {
+color:#7c7c7c;
+font-size:19px;
+
+
+}
+strong {
+    font-weight:bold;
+}
+p {
+margin-bottom:1em;
+		
+}
+
+.event p {
+   margin-bottom:30px;
+}
+
+h1,h2,h3,h4 {
+     font-family: sans-serif;
+	 
+}
+
+h1 {
+    font-size: 30px;
+    font-weight:bold;
+   
+    margin-top:0;
+    display:block;
+    margin-bottom:30px !important;
+    line-height:30px;
+}
+
+h2 {
+font-weight:bold;
+font-size:1.5em;
+margin-top:1em;
+
+}
+
+li {
+    list-style-type: square;
+    margin-left:1em;
+}
+
+
+
+/* //////////End Default Styling/////////////////// */
+
+
+
+
+               
+
+		
+		
+			h1 {
+				margin-top:30px;
+				margin-bottom:30px !important;
+				background-image:url("blink.gif");
+				width:488px;
+				height:158px;
+				text-indent:-9999px;
+			}
+			
+			h2 {
+			margin:0;
+			margin-bottom:.5em;
+			}
+			
+			* {
+				font-family:sans-serif;
+				color:#656565;
+				line-height:1.75em;
+			}
+			
+			body {
+				text-align:center;
+			}
+			#wrap {
+				padding-left:15px;
+				width:750px;
+				margin:auto;
+				text-align:left;
+			}
+			
+			.tagline {
+				
+				font-size:2.5em;
+				line-height:1em;
+				margin-bottom:.5em;
+			}
+			
+			
+			#content {
+				width:600px;
+			}
+			
+			a {
+				color:#FF2D00;
+				text-decoration:none;
+				border-bottom: 1px dotted #FF6800;
+				
+			}
+			
+			.subtag {
+				line-height:1.5em;
+				font-size:1em;
+				width:700px;
+			}
+			
+			li {
+				margin-bottom:.5em;
+				line-height:1.5em;
+			}
+			
+			.biggish {
+				font-size:2.5em;
+				margin-bottom:0;
+			}
+			
+			.brought {
+				font-weight:bold;
+			}
+			
+			.donateButton {
+				font-size:25px;
+				font-weight:bold;
+				margin-bottom:.5em;
+			}
+			
+			.first {
+				margin-top:.5em;
+			}
+		</style>
+	</head>
+	<body>
+
+<div id="wrap">
+<h1>Blink!</h1>
+<p class="tagline">A javascript engine for creating hyperlink-based interactive fiction.</p>
+
+
+<p class="subtag">If you feel like it, you can <a href="#donate">donate</a> to the project and grab a rough copy of it.</p><h2>Donate, and I will <a href="http://bloomengine.com/boy-electronic/adopt" target="_blank">blockify</a> you:</h2>
+<p><a href="http://bloomengine.com/boy-electronic/adopt" target="_blank"><img src="http://bloomengine.com/boy-electronic-kong/adopt/i/collage.png"></a>
+</p>
+<p>Or just email me if you want a copy but don't want to donate. I'll send it to you. In the meantime, here's <a href="http://bloomengine.com/binary">The Binary</a> and <a href="http://bloomengine.com/boy-electronic">Atticus and Boy Electronic</a>, games made using Blink!</p>
+
+
+<p class="brought">More stuff: <a href="http://bloomengine.com">Bloomengine</a></p>
+
+
+
+
+
+
+
+<div id="content">
+	
+<p class="biggish">Here are the goods:</p>
+	
+<h2 class="first">Web based</h2>
+<p>Runs in any modern browser. Game authors can format the content using CSS and HTML. When playing the games, all interactions performed by clicking on hyperlinks. </p>
+
+
+	
+<h2>Save/Restore System</h2>
+<p>Autosave system based on cookies. Secondary save sytem based on bookmarking a generated URL.</p>	
+	
+<h2>Rich Media</h2>
+<p>If you can embed it on a webpage, you can put it in the game. <br />Add images, youtube video or flash files. Actually I haven't tested the flash files part. But I believe it will work and if I believe hard enough it will come true. * Still working on this*  But images work.</p>
+
+<h2>Inventory System</h2>
+<p>If you like combinatorial explosions, a &ldquo;use object on object&rdquo; system is available. &ldquo;Use key on door&rdquo;, or &ldquo;use cheese on mouse&rdquo;.</p>
+
+<h2>Typography</h2>
+<p>Blink! makes use of <a href="http://code.google.com/p/jsprettify/">jsprettify</a> to make text pretty. For example, " " and ' ' are not quotation marks. Jsprettify converts them into curly quotes &ldquo; &rdquo; and &lsquo; &rsquo;.</p>
+
+<p>Interactive fiction is built with words. Text and typography are a big deal. Type should be elegant. White space is good. The CSS has been tweaked so that content gets the attention it deserves. A scrolling transcript keeps track of what the player has done.</p>
+
+
+
+
+<h2>Easy-to-write story-file code</h2>
+<p>Format text with standard html. Links can be created using shortcut code. This is what the story-file code containing two rooms and a chair looks like:</p>
+<div style="padding:10px; background-color:#F4F4F4; font-size: 12px;">
+case &quot;start&quot;:<br />
+	root = 1; <br />
+	d=&quot;&lt;h2&gt;Start room&lt;/h2&gt;&lt;p&gt;This is the room the player starts in. There is a {chair|chair1} here. A door leads to {another room|room2}.&lt;/p&gt;&quot;;<br />
+	break;<br />
+<br />
+case &quot;chair1&quot;:<br />
+	d=&quot;&lt;p&gt;An ordinary chair.&lt;/p&gt;&quot;;<br />
+	break;<br />
+<br />
+case &quot;room2&quot;:<br />
+	root=1;<br />
+	d=&quot;&lt;h2&gt;Room 2&lt;/h2&gt;&lt;p&gt;A nice room. You can go back to the {start room|start}.&lt;/p&gt;&quot;;<br />
+	break;<br />
+		
+</div>
+
+
+
+<h2>Simple Debug Tools</h2>
+<p>Track variable data as the game is being played. Edit variables in-game and see the results instantly.</p>
+
+<h2>Requirements</h2>
+<p>Web hosting with PHP (for the debugger) and basic knowledge of HTML and CSS.</p>
+
+<a name="donations"></a>
+<h2>Support Blink! Help me make more games</h2>
+<p>Building this engine has taken me a lot of time. I do web design but I'd like to spend more time making stuff like <a href="http://bloomengine.com/cycles">this</a>, <a href="http://bloomengine.com/binary">this</a> and <a href="http://bloomengine.com">this</a> instead of making people&rsquo;s logos bigger.</p>
+
+
+<h2>Donations will go toward:</h2>
+<ul>
+	<li>Food, shelter and clothing so I can keep making stuff. </li>
+	<li>Releasing the Blink! engine publicly with documentation so that you can make your own games.</li>
+	<li>Polish the source code for Blink! Under the hood it's ugly. I want to make it lean and mean.</li>
+	<li>Produce documentation: tutorials, articles how to use the framework.</li>
+	<li>Create a metrics system. Create scripts which will track and store data about how users have played the game. For example, how many unique playthroughs of your game have there been? How many clicks do people play for?</li>
+	<li>Improving the save game system so it uses a compressed URL which is not human readable.</li>
+	<li>Clean up and publicly release of the PHP-based engine which was the precursor to Blink! and used on the first <a href="http://bloomengine.com/cycles/">Vicious Cycles</a> game.</li>
+	<li>Creating mobile-browser compatible versions of Blink! Integrating the older PHP engine so that mobile browsers without javascript support can also run Blink! games.</li>
+
+</ul>
+
+<br />
+
+<a name="donate"></a>
+
+<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+<input type="hidden" name="cmd" value="_s-xclick">
+<input type="hidden" name="hosted_button_id" value="Z7J7HN5XE5X28">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+</form>
+
+
+<br /><br />
+<p><strong>Back to <a class="subtag" href="http://bloomengine.com">bloomengine.com</a></strong></p>
+<br /><br /><br />
+
+</div><!--end content-->
+</div><!--end wrap-->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-22524818-1']);
+  _gaq.push(['_setDomainName', '.bloomengine.com']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	</body>
+</html>
