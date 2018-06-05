@@ -175,10 +175,10 @@ li {
 <p class="tagline">A javascript engine for creating hyperlink-based interactive fiction.</p>
 
 
-<p class="subtag">If you feel like it, you can <a href="#donate">donate</a> to the project and grab a rough copy of it.</p><h2>Donate, and I will <a href="http://bloomengine.com/boy-electronic/adopt" target="_blank">blockify</a> you:</h2>
-<p><a href="http://bloomengine.com/boy-electronic/adopt" target="_blank"><img src="http://bloomengine.com/boy-electronic-kong/adopt/i/collage.png"></a>
+<p class="subtag">If you feel like it, you can <a href="#donate">donate</a> to the project and grab an older version of it.</p><h2>Donate, and you can be  <a href="http://bloomengine.com/boy-electronic/adopt" target="_blank">blockified</a></h2>
+<p><a href="http://bloomengine.com/boy-electronic/adopt/i/collage.png" target="_blank"><img src="http://bloomengine.com/boy-electronic/adopt/i/collage.png"></a>
 </p>
-<p>Or just email me if you want a copy but don't want to donate. I'll send it to you. In the meantime, here's <a href="http://bloomengine.com/binary">The Binary</a> and <a href="http://bloomengine.com/boy-electronic">Atticus and Boy Electronic</a>, games made using Blink!</p>
+<p>Or just write an email if you want a copy but don't want to donate. In the meantime, here's <a href="http://bloomengine.com/binary">The Binary</a> and <a href="http://bloomengine.com/boy-electronic">Atticus and Boy Electronic</a>, games made using Blink!</p>
 
 
 <p class="brought">More stuff: <a href="http://bloomengine.com">Bloomengine</a></p>
@@ -191,88 +191,14 @@ li {
 
 <div id="content">
 	
-<p class="biggish">Here are the goods:</p>
+<p class="biggish">The straight goods</p>
 	
-<h2 class="first">Web based</h2>
-<p>Runs in any modern browser. Game authors can format the content using CSS and HTML. When playing the games, all interactions performed by clicking on hyperlinks. </p>
-
-
-	
-<h2>Save/Restore System</h2>
-<p>Autosave system based on cookies. Secondary save sytem based on bookmarking a generated URL.</p>	
-	
-<h2>Rich Media</h2>
-<p>If you can embed it on a webpage, you can put it in the game. <br />Add images, youtube video or flash files. Actually I haven't tested the flash files part. But I believe it will work and if I believe hard enough it will come true. * Still working on this*  But images work.</p>
-
-<h2>Inventory System</h2>
-<p>If you like combinatorial explosions, a &ldquo;use object on object&rdquo; system is available. &ldquo;Use key on door&rdquo;, or &ldquo;use cheese on mouse&rdquo;.</p>
-
-<h2>Typography</h2>
-<p>Blink! makes use of <a href="http://code.google.com/p/jsprettify/">jsprettify</a> to make text pretty. For example, " " and ' ' are not quotation marks. Jsprettify converts them into curly quotes &ldquo; &rdquo; and &lsquo; &rsquo;.</p>
-
-<p>Interactive fiction is built with words. Text and typography are a big deal. Type should be elegant. White space is good. The CSS has been tweaked so that content gets the attention it deserves. A scrolling transcript keeps track of what the player has done.</p>
+<h2 class="first">Wabi-sabi coding style</h2>
+<p> It uses advanced programming techniques like global variables to do mostly everything important. Other techniques include deeply nested IF statements and variable names that are one letter long. Later the unstoppable power of variable scoping, functions and a few objects were added. Only then did it become a Javascript interactive adventure engine to be reckoned with.</p><p>It started as a learning experiment. It's still being cleaned up. If you already grasp a bit of HTML, CSS and Javascript, you may find it useful. Peek under the hood and you'll see an ugly baby where an engine should be but this baby has a lot of character.</p>
 
 
 
 
-<h2>Easy-to-write story-file code</h2>
-<p>Format text with standard html. Links can be created using shortcut code. This is what the story-file code containing two rooms and a chair looks like:</p>
-<div style="padding:10px; background-color:#F4F4F4; font-size: 12px;">
-case &quot;start&quot;:<br />
-	root = 1; <br />
-	d=&quot;&lt;h2&gt;Start room&lt;/h2&gt;&lt;p&gt;This is the room the player starts in. There is a {chair|chair1} here. A door leads to {another room|room2}.&lt;/p&gt;&quot;;<br />
-	break;<br />
-<br />
-case &quot;chair1&quot;:<br />
-	d=&quot;&lt;p&gt;An ordinary chair.&lt;/p&gt;&quot;;<br />
-	break;<br />
-<br />
-case &quot;room2&quot;:<br />
-	root=1;<br />
-	d=&quot;&lt;h2&gt;Room 2&lt;/h2&gt;&lt;p&gt;A nice room. You can go back to the {start room|start}.&lt;/p&gt;&quot;;<br />
-	break;<br />
-		
-</div>
-
-
-
-<h2>Simple Debug Tools</h2>
-<p>Track variable data as the game is being played. Edit variables in-game and see the results instantly.</p>
-
-<h2>Requirements</h2>
-<p>Web hosting with PHP (for the debugger) and basic knowledge of HTML and CSS.</p>
-
-<a name="donations"></a>
-<h2>Support Blink! Help me make more games</h2>
-<p>Building this engine has taken me a lot of time. I do web design but I'd like to spend more time making stuff like <a href="http://bloomengine.com/cycles">this</a>, <a href="http://bloomengine.com/binary">this</a> and <a href="http://bloomengine.com">this</a> instead of making people&rsquo;s logos bigger.</p>
-
-
-<h2>Donations will go toward:</h2>
-<ul>
-	<li>Food, shelter and clothing so I can keep making stuff. </li>
-	<li>Releasing the Blink! engine publicly with documentation so that you can make your own games.</li>
-	<li>Polish the source code for Blink! Under the hood it's ugly. I want to make it lean and mean.</li>
-	<li>Produce documentation: tutorials, articles how to use the framework.</li>
-	<li>Create a metrics system. Create scripts which will track and store data about how users have played the game. For example, how many unique playthroughs of your game have there been? How many clicks do people play for?</li>
-	<li>Improving the save game system so it uses a compressed URL which is not human readable.</li>
-	<li>Clean up and publicly release of the PHP-based engine which was the precursor to Blink! and used on the first <a href="http://bloomengine.com/cycles/">Vicious Cycles</a> game.</li>
-	<li>Creating mobile-browser compatible versions of Blink! Integrating the older PHP engine so that mobile browsers without javascript support can also run Blink! games.</li>
-
-</ul>
-
-<br />
-
-<a name="donate"></a>
-
-<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-<input type="hidden" name="cmd" value="_s-xclick">
-<input type="hidden" name="hosted_button_id" value="Z7J7HN5XE5X28">
-<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
-</form>
-
-
-<br /><br />
 <p><strong>Back to <a class="subtag" href="http://bloomengine.com">bloomengine.com</a></strong></p>
 <br /><br /><br />
 
