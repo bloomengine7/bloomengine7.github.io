@@ -2,15 +2,15 @@
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
    <channel>
       <description />
-      <title>Arcadia Heights New Content</title>
-      <generator>Bloomengine</generator>
-      <link>bloomengine.com/arcadiaheights/?source=test_email</link>
+      <title>Title [1]</title>
+      <generator>Generator [2]</generator>
+      <link>bloomengine.com/arcadiaheights/?source=test_email_link_1</link>
       <item>
-         <title>Arcadia Heights New Content [inside item]</title>
-         <description>&lt;p&gt;Email message <a href="https://google.com/blahbblsh"> here </a>&lt;/p&gt;</description>
-         <link>http://bloomengine.com/binary</link>
-         <guid>http://blog.bloomengine.com/post/88576040956/the-wonder-years</guid>
-         <pubDate>Thu, 29 Mar 2018 06:28:41 -0400</pubDate>
+         <title>title within item [2]</title>
+         <description>&lt;p&gt;Description <a href="https://google.com/blahbblsh"> here </a>&lt;/p&gt;</description>
+         <link>http://bloomengine.com/binary_link_2</link>
+         <guid>guid_181011</guid>
+         <pubDate>Thu, 11 Oct 2018 19:58:51 +00000</pubDate>
       </item>
    </channel>
 </rss>
