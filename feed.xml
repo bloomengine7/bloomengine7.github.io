@@ -1,17 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0">
    <channel>
-      <description>Bloomengine | Arcadia Heights</description>
+      <description />
       <title>Bloomengine | Arcadia Heights</title>
       <generator>Bloomengine</generator>
-      <link>https://bloomengine.com/arcadia_heights/source_code/index.html?f=E4awJsC2A+DOAuBDY85JdAnJ6BGb0ADEScWadAMx424XkAeFdALBU3Y9Ez9AGz8aXOnV5juE8cU4VqI2tKrQATLWqLym9vWigIMLcSblcxIA&amp;i=IwH1AYU0Kt9EA&amp;source=feedburner_email</link>
+      <link>https://bloomengine.com/arcadiaheights/redirects/181014.html</link>
       <item>
-         <title>Bloomengine | Arcadia Heights</title>
-         <description>
-            &lt;p&gt;Hello Everyone, Hope you're all doing good. Thanks for signing up for updates. There's a few new scenes added to the game. You can jump directly to the new content by clicking <a href="https://bloomengine.com/arcadia_heights/source_code/index.html?f=E4awJsC2A+DOAuBDY85JdAnJ6BGb0ADEScWadAMx424XkAeFdALBU3Y9Ez9AGz8aXOnV5juE8cU4VqI2tKrQATLWqLym9vWigIMLcSblcxIA&amp;i=IwH1AYU0Kt9EA&amp;source=feedburner_email">here</a>&lt;/p&gt;&lt;p&gt;Here is also some character art:&lt;/p&gt;&lt;p&gt;<img src="https://bloomengine.com/i/180811_chess_club.png" />&lt;/p&gt;
-        </description>
-        <link>https://bloomengine.com/arcadia_heights/source_code/index.html?f=E4awJsC2A+DOAuBDY85JdAnJ6BGb0ADEScWadAMx424XkAeFdALBU3Y9Ez9AGz8aXOnV5juE8cU4VqI2tKrQATLWqLym9vWigIMLcSblcxIA&amp;i=IwH1AYU0Kt9EA&amp;source=feedburner_email</link>
-         <guid>180811</guid>
+         <title>New Content for October</title>
+         <description>Hello Everyone! We have extracted more memories from Suzy's brain and some illustrations have been added to the "feelies" section. Please load your save games or click the link to continue from the last content update. Hope you enjoy! Feedback welcome. What do you like? What do you dislike? Is there anything you find buggy or confusing?</description>
+         <link>https://bloomengine.com/arcadiaheights/redirects/181014.html</link>
+         <guid>guid_181014</guid>
+         <pubDate>Thu, 14 Oct 2018 19:58:51 +00000</pubDate>
       </item>
    </channel>
 </rss>
